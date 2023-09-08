@@ -1,0 +1,14 @@
+Proyecto PHP
+
+Ademas debe permitir: 
+- Iniciar sesion (El usuario debe estar en la tabla usuarios y ser registrado manualmente en la BD)
+Puntos fuertes:
+- No debe permitir SQL Injection, y si lo detecta que redirija a una pagina de trol
+
+Opcional:
+- Crear un register (Usuarios)
+- Debe permitir generar un documento de texto con el stock disponible.
+
+
+
+

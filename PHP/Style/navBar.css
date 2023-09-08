@@ -1,0 +1,23 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -10px;
+    width: 102%;
+    height: 50px;
+    background: linear-gradient(rgb(30, 30, 30), coral);
+    border-bottom: black 2px solid;
+}
+a{
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+    text-shadow: 2px 2px rgb(30, 30, 30);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+a:hover{
+    color: rgb(0, 170, 255);
+    font-size: 1.3rem;
+    transition: 0.5s;
+    transform: translateY(5px); ;
+}
