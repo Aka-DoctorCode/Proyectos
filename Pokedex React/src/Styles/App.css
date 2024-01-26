@@ -1,0 +1,130 @@
+#fondo {
+    width: 100%;
+    height: 100%;
+    background-color: #FF2727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.esquinero {
+    width: 100px;
+    height: 100px;
+    background-color: #1e1e1e;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#SI {
+    border-radius: 0% 0% 100% 0%;
+    top: 0;
+    left: 0;
+}
+
+#II {
+    border-radius: 0% 100% 0% 0%;
+    bottom: 0;
+    left: 0;
+}
+
+#SD {
+    border-radius: 0% 0% 0% 100%;
+    top: 0;
+    right: 0;
+}
+
+#ID {
+    border-radius: 100% 0% 0% 0%;
+    bottom: 0;
+    right: 0;
+}
+
+#pantalla {
+    width: 100%;
+    height: 100px;
+    background-color: #8ad1f8;
+    border: solid #1e1e1e;
+    border-width: 8px 3px;
+}
+
+#pantalla2 {
+    width: 100%;
+    height: 90%;
+    background-color: #8ad1f8;
+    border: solid #1e1e1e;
+    border-width: 8px 3px;
+}
+
+#contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+#circulo {
+    width: 400px;
+    height: 400px;
+    background-color: #1e1e1e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#barra {
+    width: 100px;
+    height: 350px;
+    background-color: #8ad1f8;
+    position: absolute;
+    border-radius: 50% / 2%;
+}
+
+#centro {
+    width: 300px;
+    height: 300px;
+    background-color: #8ad1f8;
+    border-radius: 50%;
+}
+
+span {
+    position: absolute;
+}
+
+@media only screen and (min-width: 650px) {
+    #pantalla {
+        width: 100px;
+        height: 100%;
+        border-width: 3px 8px;
+    }
+
+    #pantalla2 {
+        width: 90%;
+        height: 100%;
+        border-width: 3px 8px;
+    }
+
+    #contenedor {
+        transform: rotate(90deg);
+    }
+
+    #circulo {
+        width: 500px;
+        height: 500px;
+    }
+
+    #barra {
+        width: 100px;
+        height: 400px;
+    }
+
+    #centro {
+        width: 350px;
+        height: 350px;
+    }
+
+    span {
+        position: absolute;
+        transform: rotate(-90deg);
+    }
+}
