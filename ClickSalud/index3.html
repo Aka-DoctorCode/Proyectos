@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Salud - Tu Salud a un Clic</title>
+    <!-- Enlace a la fuente Montserrat de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Enlace a Tailwind CSS a través del CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlace a Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2eB6jB9/t4iF4v4M/B6C0/T+6uB3S3S0e2n+053s+h8484B6P8A5P8N/nQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Definición de la paleta de colores de la marca */
+        :root {
+            --color-dark-blue: #1e4072;
+            --color-vibrant-red: #ff6b6b;
+            --color-soft-red: #f8a1a1;
+            --color-dark-gray: #404040;
+            --color-cream: #F0E0C3;
+        }
+
+        /* Configuración de Tailwind para usar la paleta de colores personalizada */
+        .bg-dark-blue { background-color: var(--color-dark-blue); }
+        .text-dark-blue { color: var(--color-dark-blue); }
+        .bg-vibrant-red { background-color: var(--color-vibrant-red); }
+        .text-vibrant-red { color: var(--color-vibrant-red); }
+        .bg-soft-red { background-color: var(--color-soft-red); }
+        .text-soft-red { color: var(--color-soft-red); }
+        .bg-dark-gray { background-color: var(--color-dark-gray); }
+        .text-dark-gray { color: var(--color-dark-gray); }
+        .bg-cream { background-color: var(--color-cream); }
+        .text-cream { color: var(--color-cream); }
+
+        /* Estilo de fuente principal */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-cream);
+            color: var(--color-dark-gray);
+        }
+
+        /* Estilo para el logo en la barra de navegación */
+        .logo-text {
+            font-weight: 700;
+        }
+
+        /* Estilo del contenedor principal para centrar el contenido y permitir el desplazamiento */
+        .page-container {
+            padding-top: 6rem; /* Espacio para la barra de navegación fija */
+        }
+    </style>
+</head>
+<body class="bg-cream">
+
+    <!-- Barra de Navegación (Navbar) -->
+    <nav id="navbar" class="fixed top-0 w-full p-4 md:px-12 flex items-center justify-between z-50 bg-dark-blue transition-all duration-300">
+        <!-- Logo de Click Salud -->
+        <a href="#inicio" class="flex items-center space-x-2">
+            <!-- Icono de corazón SVG -->
+            <svg class="w-8 h-8 text-vibrant-red" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A5.5 5.5 0 0 1 7.5 3c1.74 0 3.41.81 4.5 2.09A5.5 5.5 0 0 1 16.5 3c3.03 0 5.5 2.47 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span class="logo-text text-xl text-white">Click Salud</span>
+        </a>
+
+        <!-- Enlaces de navegación -->
+        <div class="hidden md:flex space-x-8 text-white font-semibold">
+            <a href="#inicio" class="hover:text-vibrant-red transition-colors duration-300">Inicio</a>
+            <a href="#servicios" class="hover:text-vibrant-red transition-colors duration-300">Servicios</a>
+            <a href="#como-funciona" class="hover:text-vibrant-red transition-colors duration-300">Cómo Funciona</a>
+            <a href="#medicos" class="hover:text-vibrant-red transition-colors duration-300">Nuestros Médicos</a>
+            <a href="#planes" class="hover:text-vibrant-red transition-colors duration-300">Planes y Precios</a>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="flex items-center space-x-4">
+            <a href="#" class="text-cream hover:text-white transition-colors duration-300 hidden sm:block">Iniciar Sesión</a>
+            <a href="#" class="py-2 px-6 rounded-full bg-vibrant-red text-white font-semibold shadow-md hover:bg-soft-red transition-colors duration-300">
+                Registrarse
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenedor Principal del contenido -->
+    <div class="page-container">
+        <!-- Sección de Inicio/Hero Banner -->
+        <section id="inicio" class="relative bg-white min-h-screen flex items-center justify-center text-center px-4 md:px-0 pt-20 md:pt-0">
+            <div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between py-12 md:py-24">
+                <!-- Contenido de texto -->
+                <div class="text-left md:w-1/2">
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-dark-blue leading-tight">Tu salud <br> a un clic de distancia</h1>
+                    <p class="mt-4 text-xl md:text-2xl text-dark-gray max-w-lg">Conectamos de forma segura con profesionales de la salud, desde la comodidad de tu hogar.</p>
+                    <a href="#" class="mt-8 inline-block py-3 px-8 text-lg font-bold text-white bg-vibrant-red rounded-full shadow-lg hover:bg-soft-red transition-transform transform hover:scale-105">
+                        Reservar una cita ahora
+                    </a>
+                </div>
+                <!-- Imagen principal -->
+                <div class="mt-8 md:mt-0 md:w-1/2">
+                    <!-- Imagen de una persona en consulta virtual -->
+                    <img src="https://placehold.co/600x400/FFFFFF/1e4072?text=[Imagen de un\nMédico en\nConsulta]" alt="Doctor in virtual consultation" class="rounded-3xl shadow-2xl w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección "Cómo Funciona" -->
+        <section id="como-funciona" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto max-w-6xl text-center px-4">
+                <h2 class="text-4xl md:text-5xl font-bold text-dark-blue mb-12">Cómo Funciona</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Paso 1 -->
+                    <div class="bg-cream rounded-3xl p-8 shadow-lg flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-soft-red rounded-full flex items-center justify-center text-white text-3xl mb-4">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-2">1. Elige a tu médico</h3>
+                        <p class="text-dark-gray">Explora nuestro directorio y encuentra el especialista que mejor se adapte a tus necesidades.</p>
+                    </div>
+                    <!-- Paso 2 -->
+                    <div class="bg-cream rounded-3xl p-8 shadow-lg flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-soft-red rounded-full flex items-center justify-center text-white text-3xl mb-4">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-2">2. Conéctate por videollamada</h3>
+                        <p class="text-dark-gray">Únete a la consulta virtual desde tu dispositivo, sin necesidad de desplazarte.</p>
+                    </div>
+                    <!-- Paso 3 -->
+                    <div class="bg-cream rounded-3xl p-8 shadow-lg flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-soft-red rounded-full flex items-center justify-center text-white text-3xl mb-4">
+                            <i class="fa-solid fa-prescription-bottle-medical"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark-blue mb-2">3. Recibe tu diagnóstico</h3>
+                        <p class="text-dark-gray">Obtén un diagnóstico, receta o plan de tratamiento de forma segura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios Destacados -->
+        <section id="servicios" class="py-16 md:py-24 bg-dark-blue">
+            <div class="container mx-auto max-w-6xl px-4">
+                <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12">Nuestras Especialidades</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+                    <!-- Ejemplo de Especialidad -->
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-dark-blue text-white rounded-full mx-auto flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-heart-pulse text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-blue">Cardiología</h3>
+                    </div>
+                    <!-- Repetir tarjetas para otras especialidades -->
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-dark-blue text-white rounded-full mx-auto flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-brain text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-blue">Neurología</h3>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-dark-blue text-white rounded-full mx-auto flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-baby text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-blue">Pediatría</h3>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-dark-blue text-white rounded-full mx-auto flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-hand-holding-medical text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-blue">Medicina General</h3>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-dark-blue text-white rounded-full mx-auto flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-teeth text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-blue">Odontología</h3>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-dark-blue text-white rounded-full mx-auto flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-user-tag text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-blue">Dermatología</h3>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-dark-blue text-white rounded-full mx-auto flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-person-breastfeeding text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-blue">Ginecología</h3>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-12 h-12 bg-dark-blue text-white rounded-full mx-auto flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-ear-listen text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-blue">Otorrinolaringología</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Testimonios -->
+        <section id="testimonios" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto max-w-6xl text-center px-4">
+                <h2 class="text-4xl md:text-5xl font-bold text-dark-blue mb-12">Lo que dicen nuestros pacientes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonio 1 -->
+                    <div class="bg-cream p-6 rounded-2xl shadow-lg text-left">
+                        <p class="text-dark-gray italic mb-4">"Reservar mi cita fue increíblemente sencillo. El médico fue muy amable y resolvió todas mis dudas. Un servicio de 10."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/60x60/f8a1a1/1e4072?text=JP" alt="Foto de perfil de Juan Pérez" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-dark-blue">Juan Pérez</h4>
+                                <p class="text-sm text-dark-gray">Paciente de Neurología</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="bg-cream p-6 rounded-2xl shadow-lg text-left">
+                        <p class="text-dark-gray italic mb-4">"La atención es excelente y la plataforma es muy fácil de usar, incluso para mí que no soy muy tecnológica. La recomiendo sin dudar."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/60x60/f8a1a1/1e4072?text=MA" alt="Foto de perfil de María Alonso" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-dark-blue">María Alonso</h4>
+                                <p class="text-sm text-dark-gray">Paciente de Medicina General</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 3 -->
+                    <div class="bg-cream p-6 rounded-2xl shadow-lg text-left">
+                        <p class="text-dark-gray italic mb-4">"Gracias a Click Salud pude obtener una receta urgente. El proceso fue rápido y seguro. ¡Me siento mucho más tranquila!"</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/60x60/f8a1a1/1e4072?text=LV" alt="Foto de perfil de Laura Valdés" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-dark-blue">Laura Valdés</h4>
+                                <p class="text-sm text-dark-gray">Paciente de Dermatología</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-dark-gray text-cream py-12 px-4 md:px-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 border-b-2 border-cream pb-8 mb-8">
+            <!-- Columna 1: Logo y Descripción -->
+            <div>
+                <a href="#" class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-vibrant-red" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A5.5 5.5 0 0 1 7.5 3c1.74 0 3.41.81 4.5 2.09A5.5 5.5 0 0 1 16.5 3c3.03 0 5.5 2.47 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span class="logo-text text-xl text-white">Click Salud</span>
+                </a>
+                <p class="mt-4 text-sm max-w-xs">Ofrecemos un servicio de atención médica a distancia, conectando pacientes con profesionales de la salud de forma rápida y segura.</p>
+            </div>
+
+            <!-- Columna 2: Contacto -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><i class="fa-solid fa-location-dot mr-2"></i>Calle Falsa 123, Ciudad</li>
+                    <li><i class="fa-solid fa-phone mr-2"></i>+34 912 345 678</li>
+                    <li><i class="fa-solid fa-envelope mr-2"></i>contacto@clicksalud.com</li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Enlaces Útiles -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Enlaces Útiles</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Preguntas Frecuentes</a></li>
+                    <li><a href="#" class="hover:underline">Términos y Condiciones</a></li>
+                    <li><a href="#" class="hover:underline">Política de Privacidad</a></li>
+                    <li><a href="#" class="hover:underline">Acerca de Nosotros</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Redes Sociales -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Síguenos</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-cream hover:text-vibrant-red transition-colors duration-300"><i class="fab fa-facebook-f text-2xl"></i></a>
+                    <a href="#" class="text-cream hover:text-vibrant-red transition-colors duration-300"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="text-cream hover:text-vibrant-red transition-colors duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Derechos de Autor -->
+        <div class="text-center text-sm pt-8">
+            © 2025 Click Salud. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Script para efectos de la barra de navegación al hacer scroll -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-dark-blue', 'shadow-md');
+            } else {
+                navbar.classList.remove('bg-dark-blue', 'shadow-md');
+            }
+        });
+    </script>
+
+</body>
+</html>

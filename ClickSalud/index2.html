@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Salud - Tu Salud a un Clic (Diseño Alternativo)</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Script para configurar los colores personalizados de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1e4072',
+                        'brand-red-vibrant': '#ff6b6b',
+                        'brand-red-soft': '#f8a1a1',
+                        'brand-gray': '#404040',
+                        'brand-cream': '#F0E0C3',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo para un scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Animación de entrada para elementos */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-brand-gray">
+
+    <!-- ========== BARRA DE NAVEGACIÓN ========== -->
+    <header class="bg-brand-blue text-white shadow-md sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2 text-2xl font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-red-vibrant" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                </svg>
+                <span>Click Salud</span>
+            </a>
+            
+            <!-- Enlaces de navegación para escritorio -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="hover:text-brand-red-soft transition-colors duration-300">Inicio</a>
+                <a href="#servicios" class="hover:text-brand-red-soft transition-colors duration-300">Servicios</a>
+                <a href="#como-funciona" class="hover:text-brand-red-soft transition-colors duration-300">Cómo Funciona</a>
+                <a href="#" class="hover:text-brand-red-soft transition-colors duration-300">Nuestros Médicos</a>
+                <a href="#" class="hover:text-brand-red-soft transition-colors duration-300">Planes y Precios</a>
+            </div>
+            
+            <!-- Botones de acción -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#" class="hover:text-brand-red-soft transition-colors duration-300">Iniciar Sesión</a>
+                <a href="#" class="bg-brand-red-vibrant text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                    Registrarse
+                </a>
+            </div>
+
+            <!-- Botón de menú para móviles -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Menú desplegable para móviles -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#" class="block hover:text-brand-red-soft transition-colors duration-300">Inicio</a>
+            <a href="#servicios" class="block hover:text-brand-red-soft transition-colors duration-300">Servicios</a>
+            <a href="#como-funciona" class="block hover:text-brand-red-soft transition-colors duration-300">Cómo Funciona</a>
+            <a href="#" class="block hover:text-brand-red-soft transition-colors duration-300">Nuestros Médicos</a>
+            <a href="#" class="block hover:text-brand-red-soft transition-colors duration-300">Planes y Precios</a>
+            <div class="border-t border-gray-600 pt-4 mt-4 space-y-3">
+                 <a href="#" class="block text-center hover:text-brand-red-soft transition-colors duration-300">Iniciar Sesión</a>
+                <a href="#" class="block text-center bg-brand-red-vibrant text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-opacity-90 transition-all duration-300">
+                    Registrarse
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== SECCIÓN PRINCIPAL (HERO) - DISEÑO 2 ========== -->
+        <section class="relative bg-brand-blue text-white overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="https://placehold.co/1200x800/1e4072/ffffff?text=+" alt="Fondo abstracto de salud" class="w-full h-full object-cover opacity-10">
+            </div>
+            <div class="relative container mx-auto px-6 py-24 md:py-40 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 fade-in-up">Tu salud, a un solo clic de distancia.</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 fade-in-up" style="animation-delay: 0.2s;">Consultas médicas online con especialistas de confianza, desde la comodidad de tu hogar.</p>
+                <a href="#" class="bg-brand-red-vibrant text-white font-bold py-3 px-8 rounded-lg text-lg shadow-xl hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 inline-block fade-in-up" style="animation-delay: 0.4s;">
+                    Reservar una Cita
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN CÓMO FUNCIONA - DISEÑO 2 ========== -->
+        <section id="como-funciona" class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">Acceder a tu consulta es muy fácil</h2>
+                <p class="text-brand-gray max-w-2xl mx-auto mb-16">En solo 3 sencillos pasos, estarás conectado con un profesional de la salud.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Paso 1 -->
+                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-brand-red-soft text-brand-blue rounded-full p-5 mb-5 border-4 border-white shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">1. Elige tu médico y horario</h3>
+                        <p class="text-brand-gray text-sm">Busca entre nuestros especialistas, revisa sus perfiles y elige el horario que más te convenga.</p>
+                    </div>
+                    <!-- Paso 2 -->
+                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-brand-red-soft text-brand-blue rounded-full p-5 mb-5 border-4 border-white shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">2. Conéctate por videollamada</h3>
+                        <p class="text-brand-gray text-sm">Únete a la consulta desde tu celular o computadora. Sin descargas ni instalaciones complicadas.</p>
+                    </div>
+                    <!-- Paso 3 -->
+                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-brand-red-soft text-brand-blue rounded-full p-5 mb-5 border-4 border-white shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-blue mb-2">3. Recibe tu diagnóstico</h3>
+                        <p class="text-brand-gray text-sm">Obtén tu diagnóstico, recetas médicas y plan de tratamiento de forma segura y confidencial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN DE ESPECIALIDADES - DISEÑO 2 ========== -->
+        <section id="servicios" class="bg-brand-cream py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-12">Nuestras Especialidades Destacadas</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Especialidad 1 -->
+                    <div class="group text-center cursor-pointer">
+                        <div class="bg-white p-6 rounded-lg shadow-lg group-hover:shadow-xl group-hover:-translate-y-2 transition-all duration-300 flex justify-center items-center h-32 w-32 mx-auto">
+                            <svg class="h-16 w-16 text-brand-red-vibrant" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold text-brand-blue">Cardiología</h3>
+                    </div>
+                    <!-- Especialidad 2 -->
+                    <div class="group text-center cursor-pointer">
+                        <div class="bg-white p-6 rounded-lg shadow-lg group-hover:shadow-xl group-hover:-translate-y-2 transition-all duration-300 flex justify-center items-center h-32 w-32 mx-auto">
+                           <svg class="h-16 w-16 text-brand-red-vibrant" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.282 2.72c-.217.041-.436.078-.652.107a9.09 9.09 0 01-2.828-1.754M12 12c0 3.866 3.582 7 8 7s8-3.134 8-7-3.582-7-8-7-8 3.134-8 7z" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold text-brand-blue">Pediatría</h3>
+                    </div>
+                    <!-- Especialidad 3 -->
+                    <div class="group text-center cursor-pointer">
+                        <div class="bg-white p-6 rounded-lg shadow-lg group-hover:shadow-xl group-hover:-translate-y-2 transition-all duration-300 flex justify-center items-center h-32 w-32 mx-auto">
+                            <svg class="h-16 w-16 text-brand-red-vibrant" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75v6.75m0 0l-3-3m3 3l3-3m-8.25 6a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold text-brand-blue">Psicología</h3>
+                    </div>
+                    <!-- Especialidad 4 -->
+                    <div class="group text-center cursor-pointer">
+                        <div class="bg-white p-6 rounded-lg shadow-lg group-hover:shadow-xl group-hover:-translate-y-2 transition-all duration-300 flex justify-center items-center h-32 w-32 mx-auto">
+                            <svg class="h-16 w-16 text-brand-red-vibrant" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9.75v4.542c0 .393-.119.775-.335 1.086a.75.75 0 01-1.086.335A18.75 18.75 0 0112 15.75a18.75 18.75 0 01-8.335-2.081.75.75 0 01-1.086-.335.75.75 0 01-.335-1.086V9.75a.75.75 0 011.5 0v4.542a17.25 17.25 0 007.585 1.956 17.25 17.25 0 007.585-1.956V9.75a.75.75 0 011.5 0z" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold text-brand-blue">Nutrición</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN DE TESTIMONIOS - DISEÑO 2 ========== -->
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-blue text-center mb-12">Lo que dicen nuestros pacientes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonio 1 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg border-l-4 border-brand-red-vibrant">
+                        <p class="text-brand-gray mb-4 italic">"El servicio es increíblemente conveniente. Pude hablar con un médico en minutos sin salir de casa. ¡Totalmente recomendado!"</p>
+                        <div class="flex items-center mt-6">
+                            <img src="https://placehold.co/50x50/ff6b6b/ffffff?text=AP" alt="Foto de Ana Pérez" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-brand-blue">Ana Pérez</p>
+                                <p class="text-sm text-gray-500">Paciente de Cardiología</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg border-l-4 border-brand-red-vibrant">
+                        <p class="text-brand-gray mb-4 italic">"Como madre, la telemedicina ha sido un salvavidas. Las consultas pediátricas son rápidas y el doctor fue muy amable y profesional."</p>
+                        <div class="flex items-center mt-6">
+                            <img src="https://placehold.co/50x50/1e4072/ffffff?text=LR" alt="Foto de Laura Rojas" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-brand-blue">Laura Rojas</p>
+                                <p class="text-sm text-gray-500">Madre de paciente pediátrico</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 3 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg border-l-4 border-brand-red-vibrant">
+                        <p class="text-brand-gray mb-4 italic">"Tenía mis dudas sobre la terapia online, pero la experiencia superó mis expectativas. Me sentí muy cómodo y en un espacio seguro."</p>
+                        <div class="flex items-center mt-6">
+                            <img src="https://placehold.co/50x50/404040/ffffff?text=JG" alt="Foto de Juan García" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-brand-blue">Juan García</p>
+                                <p class="text-sm text-gray-500">Paciente de Psicología</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN CALL TO ACTION (NUEVA) ========== -->
+        <section class="bg-brand-cream">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h2 class="text-3xl font-bold text-brand-blue mb-4">¿Listo para cuidar tu salud?</h2>
+                <p class="text-brand-gray max-w-xl mx-auto mb-8">Únete a miles de pacientes que ya confían en Click Salud. Regístrate hoy y agenda tu primera consulta.</p>
+                <a href="#" class="bg-brand-red-vibrant text-white font-bold py-3 px-8 rounded-lg text-lg shadow-xl hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 inline-block">
+                    Crear mi Cuenta Gratis
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== PIE DE PÁGINA (FOOTER) ========== -->
+    <footer class="bg-brand-blue text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Logo y Descripción -->
+            <div class="md:col-span-1">
+                <a href="#" class="flex items-center space-x-2 text-2xl font-bold mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-red-vibrant" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Click Salud</span>
+                </a>
+                <p class="text-gray-300">Cuidamos tu salud dondequiera que estés, conectándote con los mejores profesionales.</p>
+            </div>
+            
+            <!-- Enlaces Útiles -->
+            <div>
+                <h4 class="font-bold text-lg mb-4">Enlaces Útiles</h4>
+                <ul class="space-y-2 text-gray-300">
+                    <li><a href="#" class="hover:text-brand-red-soft">Preguntas Frecuentes</a></li>
+                    <li><a href="#" class="hover:text-brand-red-soft">Términos y Condiciones</a></li>
+                    <li><a href="#" class="hover:text-brand-red-soft">Política de Privacidad</a></li>
+                    <li><a href="#" class="hover:text-brand-red-soft">Acerca de Nosotros</a></li>
+                </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contacto</h4>
+                <ul class="space-y-2 text-gray-300">
+                    <li><p>Av. Principal 123, Ciudad</p></li>
+                    <li><p>+1 (234) 567-890</p></li>
+                    <li><p>contacto@clicksalud.com</p></li>
+                </ul>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div>
+                <h4 class="font-bold text-lg mb-4">Síguenos</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-brand-red-soft">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-brand-red-soft">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-brand-red-soft">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm0 1.623c-2.403 0-2.73.01-3.688.056-1.003.046-1.503.211-1.894.367-.484.188-.826.428-1.163.766-.337.337-.578.679-.766 1.163-.156.391-.321.891-.367 1.894-.046.958-.056 1.285-.056 3.688s.01 2.73.056 3.688c.046 1.003.211 1.503.367 1.894.188.484.428.826.766 1.163.337.337.679.578 1.163.766.391.156.891.321 1.894.367.958.046 1.285.056 3.688.056s2.73-.01 3.688-.056c1.003-.046 1.503-.211 1.894-.367.484-.188.826-.428 1.163-.766.337-.337.578-.679.766-1.163.156-.391.321-.891-.367-1.894.046-.958.056-1.285.056-3.688s-.01-2.73-.056-3.688c-.046-1.003-.211-1.503-.367-1.894a3.308 3.308 0 00-.766-1.163 3.303 3.303 0 00-1.163-.766c-.391-.156-.891-.321-1.894-.367-.958-.046-1.285-.056-3.688-.056zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12 14a2 2 0 110-4 2 2 0 010 4zm6.406-7.188a.938.938 0 100-1.875.938.938 0 000 1.875z" clip-rule="evenodd" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Derechos de Autor -->
+        <div class="mt-8 border-t border-gray-700">
+            <p class="text-center text-gray-400 pt-8">© 2025 Click Salud. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Lógica para el menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
